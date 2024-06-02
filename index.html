@@ -1,110 +1,221 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Portfolio Yoa Herstel</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Portfolio Yoa Herstel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        header nav ul li {
+            margin: 0 1rem;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #intro {
+            background: url('images/hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 4rem 0;
+        }
+        #intro h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        #intro p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        #intro .btn {
+            background: #ff6b6b;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        #main {
+            padding: 2rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        .project-card img {
+            width: 100%;
+            height: auto;
+        }
+        .project-card h3 {
+            margin: 1rem;
+            font-size: 1.5rem;
+        }
+        .project-card p {
+            margin: 1rem;
+            font-size: 1rem;
+        }
+        .project-card a {
+            display: block;
+            background: #ff6b6b;
+            color: #fff;
+            text-align: center;
+            padding: 0.75rem;
+            text-decoration: none;
+            margin: 1rem;
+            border-radius: 4px;
+        }
+        #contact {
+            padding: 2rem;
+            background: #f4f4f4;
+        }
+        #contact form {
+            display: grid;
+            grid-gap: 1rem;
+        }
+        #contact form label {
+            font-weight: bold;
+        }
+        #contact form input, #contact form textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Hi, I am<br />
-						Yoa Herstel</h1>
-						<p>Scroll down to find out more about me and my work. </p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        <!-- Intro -->
+        <div id="intro">
+            <h1>Hi, I am<br />
+            Yoa Herstel</h1>
+            <p>Scroll down to find out more about me and my work. </p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
 
-				<!-- Header -->
-					<header id="header">
-						<a class="logo">Keep scrolling </a>
-					</header>
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-				<!-- Main -->
-					<div id="main">
+        <!-- Main -->
+        <div id="main">
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2> Let me<br />
-									introduce myself</h2>
-									<p>I am a 25-year-old graphic designer from the Netherlands with a passion for sustainability and creating stunning designs. With a Bachelor's degree in Industrial Product Design, I've always focused on the graphic aspect of the field. As the founder of Liquid Jungle, I've designed logos for local startups and hostels around the world. I'm particularly proud of my recent NFT project, where I drew 1000 unique NFTs while managing a successful Twitter and Discord community of over 2000 followers. I'm excited to continue exploring new ways to express my creativity and bring value to clients through design.<br /></p>
-								</header>
-								<a class="image main"><img src="images/pic01.jpg"/></a>
-								<ul class="actions special">
-									<li><a href="Resume_Yoa_Herstel.pdf" target="_blank" class="button large">See Resume</a></li>
-								</ul>
-							</article>
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    <h2> Let me<br />
+                    introduce myself</h2>
+                    <p>I am a 25-year-old graphic designer from the Netherlands with a passion for sustainability and creating stunning designs. With a Bachelor's degree in Industrial Product Design, I've always focused on the graphic aspect of the field. As the founder of Liquid Jungle, I've designed logos for local startups and hostels around the world. I'm particularly proud of my recent NFT project, where I drew 1000 unique NFTs while managing a successful Twitter and Discord community of over 2000 followers. I'm excited to continue exploring new ways to express my creativity and bring value to clients through design.<br /></p>
+                </header>
+                <a class="image main"><img src="images/pic01.jpg" alt="Introduction Image" /></a>
+                <ul class="actions special">
+                    <li><a href="Resume_Yoa_Herstel.pdf" target="_blank" class="button large">See Resume</a></li>
+                </ul>
+            </article>
 
-						<!-- Projects -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2>Liquid Jungle
-										</h2>
-									</header>
-									<a href="ComingSoon.html" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>I founded Liquid Jungle, a graphic design company focused on logo design. I created logos for both local startups and international hostels while traveling. I am currently pursuing a full stack developer course to further expand my skills.</p>
-									<ul class="actions special">
-										<li><a href="ComingSoon.html" class="button">Coming soon</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2>BRDGRL<br />
-										</a></h2>
-									</header>
-									<a href="BRDGRL.html" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>I created over 1000 unique hand-drawn NFTs using Procreate, designed a professional website, and managed social media accounts with over 2000 followers. This project highlights my skills in digital art, website development, and social media management.</p>
-									<ul class="actions special">
-										<li><a href="BRDGRL.html" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2>Sustainable Flipflop</h2>
-									</header>
-									<a href="Scriptie.pdf" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>My graduation project involved leading a sustainable flip-flop design process, collaborating with podiatrists, a design team, and manufacturers in China. I managed the project from analysis to testing, and created a report highlighting the process and final design.</p>
-<!-- ADD PDF AFTER WEBSITE IS ONLINE -->
-									<ul class="actions special">
-										<li><a href="Scriptie.pdf" target="_blank" class="button" >See Report</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2>Enreach</h2>
-									</header>
-									<a href="comingsoon.html" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>For this internship I designed a remote-controlled hand for picking up objects in toxic environments. Utilized SolidWorks for 3D printing and created wooden prototypes for testing. Collaborated with my team on the remote control mechanism for finger movement.</p>
-									<ul class="actions special">
-										<li><a href="comingsoon.html" class="button">Coming soon</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2>Sense up</h2>
-									</header>
-									<a href="Sense_Up.mp4" target="_blank" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>As part of a school project, I collaborated with two team members to design a sensor that attaches to the front of a shoe and sends a notification to a phone when uneven terrain is detected. This solution aimed to improve mobility and prevent falls for older individuals.</p>
-									<ul class="actions special">
-										<li><a href="Sense_Up.mp4" target="_blank" class="button">Watch The Video</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2>Delivery Bike</h2>
-									</header>
-									<a href="ComingSoon.html" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>
-									We designed a cargo bicycle for local supermarkets, featuring a detachable front for sustainable transportation. This design reduced truck use, facilitated loading/unloading, and made it easy to navigate busy or narrow streets.</p>
+            <!-- Projects -->
+            <section id="projects" class="posts">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <img src="images/pic02.jpg" alt="Liquid Jungle">
+                        <h3>Liquid Jungle</h3>
+                        <p>I founded Liquid Jungle, a graphic design company focused on logo design. I created logos for both local startups and international hostels while traveling. I am currently pursuing a full stack developer course to further expand my skills.</p>
+                        <a href="ComingSoon.html" class="button">Coming soon</a>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/pic03.jpg" alt="BRDGRL">
+                        <h3>BRDGRL</h3>
+                        <p>I created over 1000 unique hand-drawn NFTs using Procreate, designed a professional website, and managed social media accounts with over 2000 followers. This project highlights my skills in digital art, website development, and social media management.</p>
+                        <a href="BRDGRL.html" class="button">Full Story</a>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/pic04.jpg" alt="Sustainable Flipflop">
+                        <h3>Sustainable Flipflop</h3>
+                        <p>My graduation project involved leading a sustainable flip-flop design process, collaborating with podiatrists, a design team, and manufacturers in China. I managed the project from analysis to testing, and created a report highlighting the process and final design.</p>
+                        <a href="Scriptie.pdf" target="_blank" class="button">See Report</a>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/pic05.jpg" alt="Enreach">
+                        <h3>Enreach</h3>
+                        <p>For this internship, I designed a remote-controlled hand for picking up objects in toxic environments. Utilized SolidWorks for 3D printing and created wooden prototypes for testing. Collaborated with my team on the remote control mechanism for finger movement.</p>
+                        <a href="ComingSoon.html" class="button">Coming soon</a>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/pic06.jpg" alt="Sense up">
+                        <h3>Sense up</h3>
+                        <p>As part of a school project, I collaborated with two team members to design a sensor that attaches to the front of a shoe and sends a notification to a phone when uneven terrain is detected. This solution aimed to improve mobility and prevent falls for older individuals.</p>
+                        <a href="Sense_Up.mp4" target="_blank" class="button">Watch The Video</a>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/pic07.jpg" alt="Delivery Bike">
+                        <h3>Delivery Bike</h3>
+                        <p>We designed a cargo bicycle for local supermarkets, featuring a detachable front for sustainable transportation. This design reduced truck use, facilitated loading/unloading, and made it easy to navigate busy or narrow streets.</p>
 									<ul class="actions special">
 										<li><a href="comingsoon.html" class="button">Coming Soon</a></li>
 									</ul>
